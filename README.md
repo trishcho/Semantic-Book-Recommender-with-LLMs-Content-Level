@@ -18,7 +18,7 @@ This repo shows how to build a semantic book recommender using modern LLM toolin
 
 * Gradio dashboard for interactive recommendations
 
-# What’s inside
+### What’s inside
 
 * data-exploration.ipynb — light cleaning and prep of book metadata/descriptions
 
@@ -38,19 +38,19 @@ pip install \
   langchain-openai langchain-text-splitters
 
 
-# Add your OpenAI key (for embeddings)
+### Add your OpenAI key (for embeddings)
 Create a .env in the project root:
 
 OPENAI_API_KEY=sk-...
 
-# Get the data
+### Get the data
 
 Download the CSV from Kaggle:
 https://www.kaggle.com/datasets/dylanjcastillo/7k-books-with-metadata?resource=download
 
 Put it in the project folder (or update code paths accordingly).
 
-# (Optional) Build a line-delimited text file for descriptions
+### (Optional) Build a line-delimited text file for descriptions
 
 import pandas as pd, pathlib
 books = pd.read_csv("books_with_emotions.csv")  # or the Kaggle CSV you preprocessed
@@ -60,20 +60,20 @@ pathlib.Path("tagged_description.txt").write_text(
 )
 
 
-# Run the dashboard
+### Run the dashboard
 python gradio-dashboard.py
-# then open the printed URL (e.g., http://127.0.0.1:7860)
+### then open the printed URL (e.g., http://127.0.0.1:7860)
 
 
 
-# Notes & tips
-# New standalone package
+### Notes & tips
+
 from langchain_chroma import Chroma
 
-# Community bundle
+### Community bundle
 from langchain_community.vectorstores import Chroma
 
-# Text splitters
+### Text splitters
 
 CharacterTextSplitter requires a positive chunk_size and non-negative chunk_overlap.
 
@@ -85,7 +85,7 @@ text_splitter = CharacterTextSplitter(
   chunk_overlap=50  # >= 0
 )
 
-# pandas read_csv
+### pandas read_csv
 
 The old error_bad_lines/warn_bad_lines args were removed. Use on_bad_lines="skip" instead.
 
@@ -100,7 +100,7 @@ df = pd.read_csv(
 )
 
 
-# Torch on macOS (M-series)
+### Torch on macOS (M-series)
 
 Check Apple GPU (MPS) and pass an int device index to 🤗 pipelines (0 = GPU/MPS, -1 = CPU). Do not pass "mps" as a string.
 
