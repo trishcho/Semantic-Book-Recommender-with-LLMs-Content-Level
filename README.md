@@ -4,7 +4,7 @@ Semantic book recommender powered by LLMs: OpenAI embeddings + Chroma vector sea
 Zero-shot Fiction/Nonfiction tagging and emotion-based re-ranking, wrapped in a clean Gradio UI for instant recommendations.
 
 
-
+<img width="1459" height="668" alt="Image" src="https://github.com/user-attachments/assets/99c5877e-ead4-4a7b-a134-b92fe1cc2ae0" />
 
 Kaggle dataset (7k books): https://www.kaggle.com/datasets/dylanjcastillo/7k-books-with-metadata?resource=download
 
